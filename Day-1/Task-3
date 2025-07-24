@@ -1,0 +1,43 @@
+console.log("Arithmetic Operators:");
+console.log(10 + 5);
+console.log(10 - 5);
+console.log(10 * 2);
+console.log(10 / 2);
+console.log(10 % 3);
+
+console.log("Assignment Operators:");
+let a = 5;
+a += 3;
+console.log(a);
+
+console.log("Relational Operators:");
+console.log(5 == '5');
+console.log(5 === '5');
+console.log(5 != 6);
+console.log(5 < 10);
+console.log(5 >= 5);
+
+console.log("Logical Operators:");
+console.log(true && false);
+console.log(true || false);
+console.log(!false);
+
+console.log("Ternary Operator:");
+let age = 18;
+console.log(age >= 18 ? "Adult" : "Minor");
+
+console.log("Bitwise Operators:");
+console.log(5 & 1);
+console.log(5 | 1);
+console.log(5 ^ 1);
+console.log(~5);
+console.log(5 << 1);
+console.log(5 >> 1);
+
+console.log("Increment & Decrement:");
+let x = 5;
+x++;
+console.log(x);
+let y = 5;
+y--;
+console.log(y);
