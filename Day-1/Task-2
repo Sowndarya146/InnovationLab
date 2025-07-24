@@ -1,0 +1,27 @@
+//Data Types
+let num = 10; 
+console.log(typeof num);   
+let str = "20";  
+console.log(typeof str);    
+let bool = false;
+console.log(typeof bool);     
+let undef;  
+console.log(typeof undef);  
+let nul = null;       
+console.log(typeof nul);   
+let obj = { key: "value" }; 
+console.log(typeof obj);    
+
+        
+//Type conversions
+let imp1 = "5" * 2;
+console.log('"5" * 2 =', imp1);
+let imp2 = "10" + 5;
+console.log('"10" + 5 =', imp2);
+
+let exp1 = Number("5") * 2;
+console.log('Number("5") * 2 =', exp1);
+let exp2 = String(10) + 5;
+console.log('String(10) + 5 =', exp2);
+
+        
