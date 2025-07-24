@@ -1,0 +1,14 @@
+var name = "Sowndarya ";
+let age = 18;
+const clg = "India";
+
+console.log("Name:", name);
+console.log("Age:", age);
+console.log("College:", clg);
+
+
+name = "PalaniSamy";
+age = 19;
+
+console.log("Updated Name:", name);
+console.log("Updated Age:", age);
