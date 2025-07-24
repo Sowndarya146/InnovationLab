@@ -1,0 +1,44 @@
+//if-else and else-if blocks
+let marks = prompt("Enter your marks:");
+marks = Number(marks);
+
+if (marks >= 90) {
+  console.log("Grade: A");
+} else if (marks >= 75) {
+  console.log("Grade: B");
+} else if (marks >= 60) {
+  console.log("Grade: C");
+} else if (marks >= 40) {
+  console.log("Grade: D");
+} else {
+  console.log("Grade: F (Fail)");
+}
+
+//switch statements
+let day = Number(prompt("Enter a number (1 to 7):"));
+
+switch (day) {
+  case 1:
+    console.log("Sunday");
+    break;
+  case 2:
+    console.log("Monday");
+    break;
+  case 3:
+    console.log("Tuesday");
+    break;
+  case 4:
+    console.log("Wednesday");
+    break;
+  case 5:
+    console.log("Thursday");
+    break;
+  case 6:
+    console.log("Friday");
+    break;
+  case 7:
+    console.log("Saturday");
+    break;
+  default:
+    console.log("Invalid day number");
+}
