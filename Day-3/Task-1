@@ -1,0 +1,10 @@
+function performAction(callback) {
+    console.log("Performing action...");
+    callback();
+}
+
+function callbackFunction() {
+    console.log("Callback function executed.");
+}
+
+performAction(callbackFunction);
