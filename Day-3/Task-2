@@ -1,0 +1,13 @@
+performAction(callbackFunction);
+
+function performTask(callback) {
+    console.log("Task started...");
+    setTimeout(() => {
+        console.log("Task completed.");
+        callback(); // Calling the callback after task completion
+    }, 2000); 
+}
+
+function onTaskCompletion() {
+    console.log("Task completion callback executed.");
+}
