@@ -1,0 +1,29 @@
+//Random number generation 
+let rand = Math.floor(Math.random() * 100 + 1);
+console.log(rand);
+
+//Rounding numbers
+let num = 2.4;
+console.log("Floor:", Math.floor(num));   
+console.log("Ceil:", Math.ceil(num));
+
+//Maximum,Minimum 
+let numbers = [4, 12, 52, 99, 21];
+console.log("Minimum:", Math.min(...numbers));  
+console.log("Maximum:", Math.max(...numbers)); 
+
+//Changing case
+let text = "Hello World";
+console.log("Uppercase:", text.toUpperCase());  
+console.log("Lowercase:", text.toLowerCase());  
+
+//Extracting substrings
+console.log("Substring (0 to 5):", text.substring(0, 5)); 
+
+//Checking inclusion
+console.log("Includes 'World:", text.includes("World"));   
+console.log("Includes 'Universe':", text.includes("Universe")); 
+
+//Replacing text
+let replaced = text.replace("World", "Universe");
+console.log("Replaced text:", replaced);  
