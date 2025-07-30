@@ -1,0 +1,13 @@
+1. let is a global scope,var is a local scope
+2. '55'
+3. ===
+4. It checks a condition and gives one value as answer
+5. simple code:
+   let a = 53;
+   a++;
+   console.log(a);
+   #output:54
+   let a = 53;
+   a--;
+   console.log(a);
+   #output:52
