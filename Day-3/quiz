@@ -1,0 +1,7 @@
+1. syntax:
+   (parameters) => { function body }
+2. A function passed to another function to run later
+3. Function declarations can be called before defined.
+   function expressions must be defined before called.
+4. Global is used everywhere; local is used only inside blocks or functions
+5. Rest parameters(...args) are used
