@@ -1,0 +1,15 @@
+1. if checks the first condition
+   else if checks the next condition if the first one is false
+2. When you are checking one value with many choices
+3. code:
+   for (let i = 1; i <= 5; i++) {
+  if (i === 4) {
+    break;
+  }
+  console.log(i);
+}
+#output:1 2 3
+4. while checks before running
+   do-while checks after running
+5. continue will skip the current step and goes to the next one in the loop
+
