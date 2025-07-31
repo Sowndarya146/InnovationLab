@@ -1,0 +1,81 @@
+HTML Code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple JavaScript Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <button onclick="calculate()">Start Calculation</button>
+    <script src="script.js"></script>
+</body>
+</html>
+
+CSS Code
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center; 
+    padding-top: 50px;
+}
+.calculator {
+    background-color: white;
+    border-radius: 10px;
+    display: inline-block; 
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+input {
+    width: 200px;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    display: block;       
+    margin: 0 auto;       
+}
+button:hover {
+    background-color: #0056b3;
+}
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+JAVASCRIPT Code
+function calculate() {
+    var num1 = parseFloat(prompt("Enter first number:"));
+    let num2 = parseFloat(prompt("Enter second number:"));
+   
+    const Addition = num1 + num2;
+    const Subtraction = num1 - num2;
+    const Multiplication = num1 * num2;
+
+    const quotient = (num2 !== 0) ? (num1 / num2) : "Cannot divide by zero";
+    const remainder = (num2 !== 0) ? (num1 % num2) : "Undefined";
+
+    console.log(`First Number: ${num1}`);
+    console.log(`Second Number: ${num2}`);
+    console.log(`Addition: ${Addition}`);
+    console.log(`Subtraction: ${Subtraction}`);
+    console.log(`Multiplication: ${Multiplication}`);
+    console.log(`Quotient: ${quotient}`);
+    console.log(`Remainder: ${remainder}`);
+}
+
