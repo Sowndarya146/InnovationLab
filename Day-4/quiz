@@ -1,0 +1,7 @@
+1. Math.floor(4.7) returns 4
+2. Using .toUpperCase() method
+3. forEach() method runs a function on each item in the array but doesn't create a new array
+   map() function returns a new array 
+4. It iterates over array indexes
+5. [4, 6, 8].map(n => n * 2) 
+   #output [8, 12, 16].
