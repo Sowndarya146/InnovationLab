@@ -1,0 +1,34 @@
+// Creating arrays
+let numbers = [24, 42, 53];
+let cities = ["Coimbatore", "Mumbai", "Chennai", "Hyderabad"];
+
+console.log("Numbers:", numbers);
+console.log("Cities:", cities);
+
+// Accessing and changing an element
+console.log("First City:", cities[0]);
+cities[0] = "Kolkata";
+console.log("Changed Cities:", cities);
+
+// Finding the size of arrays
+console.log("How many numbers:", numbers.length);
+console.log("How many Cities:", cities.length);
+
+// Adding items to the end
+numbers.push(4);
+cities.push("NewDelhi");
+
+// Removing last item
+numbers.pop();
+cities.pop();
+
+// Adding items to the start
+numbers.unshift(0);
+cities.unshift("Bangalore");
+
+// Removing first item
+numbers.shift();
+cities.shift();
+
+console.log("Final Numbers:", numbers);
+console.log("Final Cities:", cities);
