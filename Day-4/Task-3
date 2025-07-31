@@ -1,0 +1,26 @@
+// Creating an array
+let numbers = [5, 12, 24, 42];
+
+// Using forEach() 
+console.log("Using forEach:");
+numbers.forEach(function(num) {
+  console.log(num);
+});
+
+// Using map()
+let squared = numbers.map(function(num) {
+  return num * num;
+});
+console.log("Using map (squared):", squared);
+
+// for-in()
+console.log("Using for-in (indexes):");
+for (let i in numbers) {
+  console.log("Index:", i, "Value:", numbers[i]);
+}
+
+// for-of()
+console.log("Using for-of (values):");
+for (let value of numbers) {
+  console.log("Value:", value);
+}
