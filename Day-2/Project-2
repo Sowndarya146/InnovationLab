@@ -8,15 +8,14 @@ HTML Code
 </head>
 <body>
   <h2>Basic Menu-Driven Calculator</h2>
-  <pre>
-    Operations:
-      1. Add
-      2. Subtract
-      3. Multiply
-      4. Divide
-      5. Exit
-  </pre>
-
+  <p>Operations:</p>
+  <ul>
+    <li>1. Add</li>
+    <li>2. Subtract</li>
+    <li>3. Multiply</li>
+    <li>4. Divide</li>
+    <li>5. Exit</li>
+  </ul>
   <script src="script.js"></script>
 </body>
 </html>
