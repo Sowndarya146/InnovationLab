@@ -1,0 +1,32 @@
+// Using filter()
+let numbers = [2, 12, 8, 21];
+let result = numbers.filter(n => n > 10);
+console.log("Filter Result:", result);  
+
+// Using reduce() 
+let nums = [22, 42, 53, 64];
+let sum = nums.reduce((total, n) => total + n, 0);
+console.log("Reduce Sum:", sum);  
+
+// Using reduce() to concatenating strings
+let words = ["Java", "Script", "!"];
+let sentence = words.reduce((acc, word) => acc + " " + word);
+console.log("Reduce Concat:", sentence);  
+
+// Using slice() 
+let fruits = ["apple", "cheery", "mango", "orange"];
+let sliced = fruits.slice(1, 3);
+console.log("Slice Result:", sliced);  
+
+// Using splice()
+let colors = ["red", "blue", "green"];
+colors.splice(1, 1, "yellow");
+console.log("Splice Result:", colors);  
+
+// Using Spread operator 
+let a = [11, 24];
+let b = [35, 42];
+let combined = [...a, ...b];
+console.log("Spread Combine:", combined);  
+
+
