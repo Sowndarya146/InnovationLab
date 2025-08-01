@@ -1,0 +1,25 @@
+//creating object
+let student = {
+  name: "Sowndarya",
+  age: 19,
+  address: "Coimbatore",
+  college: "KG College",
+  department: "Computer Technology",
+  Info: function () {
+    console.log("Name:", this.name);
+    console.log("Age:", this.age);
+  },
+  educationDetails: function () {
+    console.log("College:", this.college);
+    console.log("Department:", this.department);
+    console.log("Address:", this.address);
+  }
+};
+
+// Adding functions 
+student.transportInfo = function () {
+  console.log("Transport Mode: out Bus");
+};
+student.Info();
+student.educationDetails();
+student.transportInfo();
