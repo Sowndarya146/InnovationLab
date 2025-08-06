@@ -1,0 +1,68 @@
+HTML Code:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Grades Processor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Student Grades Processor</h1>
+  <script src="script.js"></script>
+</body>
+</html>
+
+CSS Code:
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+h1 {
+  color: #333;
+}
+
+JavaScript Code:
+//Creating array of student objects with name and scores
+let students = [
+  { name: "liza", score: 98.3 },
+  { name: "rose", score: 44.9 },
+  { name: "zara", score: 28.2 },
+  { name: "mona", score: 91.4 }
+];
+
+//Rounding scores and capitalizing names
+students.forEach(student => {
+  student.score = Math.round(student.score);
+  student.name = student.name.charAt(0).toUpperCase() + student.name.slice(1);
+});
+
+//Printing names and scores using forEach
+console.log("Student Scores:");
+students.forEach(student => {
+  console.log(student.name + ": " + student.score);
+});
+
+//Creating pass/fail array using map
+let results = students.map(student => {
+  return {
+    name: student.name,
+    status: student.score >= 50 ? "Pass" : "Fail"
+  };
+});
+
+console.log("\nPass/Fail Results:");
+results.forEach(result => {
+  console.log(result.name + ": " + result.status);
+});
+
+//Congratulating students scoring above 80 using for-of
+console.log("\nCongratulations:");
+for (let student of students) {
+  if (student.score > 80) {
+    console.log("congratulations!!, " + student.name + "! You scored " + student.score);
+  }
+}
+
+
+
