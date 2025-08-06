@@ -1,0 +1,32 @@
+//Destructuring
+const user = { name: "Anu", age: 19 };
+const { name, age } = user;
+console.log(name);  
+console.log(age);  
+
+//Destructuring with Default Values
+const transportDetails = {
+  studentName: "Pooja"
+};
+const { studentName, transportMode = "Bus" } = transportDetails;
+console.log(studentName);     
+console.log(transportMode);   
+     
+//Nested Destructuring
+const student1 = {
+  info: { id: 53, dept: "Computer Technology" }
+};
+const { info: { id, dept } } = student1;
+console.log(id);    
+console.log(dept);  
+
+//Spread clone
+const student2 = { name: "Dhanya", rollNo: 11 };
+const studentCopy = { ...student2 };
+console.log(studentCopy); 
+
+//Spread merge
+const marks1 = { math: 85 };
+const marks2 = { english: 90 };
+const totalMarks = { ...marks1, ...marks2 };
+console.log(totalMarks); 
