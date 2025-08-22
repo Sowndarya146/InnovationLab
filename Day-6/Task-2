@@ -1,0 +1,29 @@
+//Array of objects
+const employees = [
+  { id: 101, name: "dhanya", dept: "HR" },
+  { id: 102, name: "sai", dept: "IT" }
+];
+console.log(employees[0].dept); 
+
+//Rest Parameters
+function findMax(...nums) {
+  return Math.max(...nums);
+}
+console.log(findMax(5, 10, 2, 30)); 
+
+//Spread Operator
+const arrA = ["x", "y"];
+const arrB = ["z"];
+const merged = [...arrA, ...arrB];
+console.log(merged); 
+
+// Clone object with extra property
+const city = { name: "Chennai", state: "TN" };
+const updatedCity = { ...city, country: "India" };
+console.log(updatedCity);
+
+//Function with parameter destructuring
+function showEmployee({ id, name, dept }) {
+  console.log(`ID: ${id}, Name: ${name}, Dept: ${dept}`);
+}
+showEmployee(employees[1]);
