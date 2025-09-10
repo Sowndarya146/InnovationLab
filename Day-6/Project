@@ -1,0 +1,102 @@
+HTML CODE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Contact Management Module</h2>
+  <pre id="output"></pre>
+  <script src="script.js"></script>
+</body>
+</html>
+
+CSS CODE 
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  text-align: center;
+  padding: 20px;
+}
+h2 {
+  color: #333;
+}
+pre {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  max-width: 600px;
+  margin: 20px auto;
+  overflow: auto;
+}
+
+JAVASCRIPT CODE
+// Contact Management Module
+
+// 1. Array of contacts
+let contacts = [
+  {
+    name: "alex",
+    phone: "1234567890",
+    email: "alex@example.com",
+    display() {
+      return `${this.name} | ${this.phone} | ${this.email}`;
+    }
+  },
+  {
+    name: "rock",
+    phone: "9876543210",
+    email: "rock@example.com",
+    display() {
+      return `${this.name} | ${this.phone} | ${this.email}`;
+    }
+  }
+];
+
+// Utility to print outputs
+function logOutput(msg) {
+  document.getElementById("output").textContent += msg + "\n";
+}
+
+// 2. Destructuring example
+function showContact({ name, phone, email }) {
+  logOutput(`Destructured -> ${name}, ${phone}, ${email}`);
+}
+
+// 3. Access properties with dot & bracket
+logOutput("Dot notation: " + contacts[0].name);
+logOutput("Bracket notation: " + contacts[0]["email"]);
+
+// 4. Iterate through contacts
+contacts.forEach(c => logOutput("Iterating -> " + c.display()));
+
+// 5. Rest parameter function
+function addContacts(...newContacts) {
+  contacts.push(...newContacts);
+}
+addContacts(
+  { name: "Charlie", phone: "9845346423", email: "charlie@example.com", display() { return `${this.name} | ${this.phone} | ${this.email}`; } }
+);
+
+// 6. Spread operator (merge arrays)
+let moreContacts = [
+  { name: "Daisy", phone: "9785734567", email: "daisy@example.com", display() { return `${this.name} | ${this.phone} | ${this.email}`; } }
+];
+let mergedContacts = [...contacts, ...moreContacts];
+logOutput("Merged length: " + mergedContacts.length);
+
+// 7. Demonstrate call, apply, bind
+let other = { name: "Eve", phone: "9876543216", email: "eve@example.com" };
+function showDisplay(prefix) {
+  logOutput(prefix + " " + this.name + " | " + this.phone + " | " + this.email);
+}
+showDisplay.call(other, "Using call:");
+showDisplay.apply(other, ["Using apply:"]);
+let boundFn = showDisplay.bind(other, "Using bind:");
+boundFn();
+
+// Final: show destructuring output
+showContact(contacts[0]);
