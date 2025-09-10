@@ -1,0 +1,5 @@
+// Date Objects
+let now = new Date();
+console.log("Now:", now);
+console.log("Year:", now.getFullYear(), "Month:", now.getMonth()+1, "Day:", now.getDate());
+
