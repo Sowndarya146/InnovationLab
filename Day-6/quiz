@@ -1,0 +1,8 @@
+1. let { name, info: { city } } = user;
+2. function sum(...nums){ return nums.reduce((a,b)=>a+b); }
+3. let c = [...a, ...b];
+4. call(thisArg, ...args), apply(thisArg, [args]), bind(thisArg, ...args) (returns bound function)
+5. for (const [k,v] of Object.entries(obj)) console.log(k,v);
+
+
+
