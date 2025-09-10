@@ -1,0 +1,137 @@
+HTML CODE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Shopping Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Shopping Cart</h1>
+
+  <div id="productList" class="box"></div>
+  <div id="cartDetails" class="box"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+CSS CODE
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f8f9fa;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.box {
+  margin: 15px auto;
+  max-width: 500px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+button {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.total {
+  font-weight: bold;
+  text-align: right;
+  margin-top: 10px;
+}
+
+JAVASCRIPT CODE
+// Array of product objects
+let products = [
+  {id: 1, name: "Laptop", price: 50000, quantity: 2},
+  {id: 2, name: "Phone", price: 25000, quantity: 0},
+  {id: 3, name: "Headphones", price: 2000, quantity: 5},
+  {id: 4, name: "Keyboard", price: 1500, quantity: 1}
+];
+
+// Render product list
+function renderProducts() {
+  const productList = document.getElementById("productList");
+  productList.innerHTML = "<h3>Products</h3>";
+  products.forEach(({name, price, quantity}, index) => {
+    productList.innerHTML += `
+      <div class="product">
+        <span>${name} - ₹${price} (Qty: ${quantity})</span>
+        <button onclick="removeProduct(${index})">Remove</button>
+      </div>
+    `;
+  });
+}
+
+// Remove product using splice()
+function removeProduct(index) {
+  products.splice(index, 1);
+  renderProducts();
+  renderCart();
+}
+
+// Use filter() to get available items
+function getAvailableProducts() {
+  return products.filter(p => p.quantity > 0);
+}
+
+// Use reduce() to calculate total
+function calculateTotal() {
+  return products.reduce((total, p) => total + (p.price * p.quantity), 0);
+}
+
+// Use spread operator to add a new product
+function addNewProduct() {
+  products = [...products, {id: 5, name: "Mouse", price: 800, quantity: 3}];
+  renderProducts();
+  renderCart();
+}
+
+// Object with method + destructuring
+const productUtil = {
+  printDetails(product) {
+    const {id, name, price, quantity} = product;
+    return `ID: ${id}, ${name} - ₹${price}, Qty: ${quantity}`;
+  }
+};
+
+// Render cart
+function renderCart() {
+  const cart = document.getElementById("cartDetails");
+  const available = getAvailableProducts();
+
+  cart.innerHTML = "<h3>Cart (Available Items)</h3>";
+  available.forEach(p => {
+    cart.innerHTML += `<div>${productUtil.printDetails(p)}</div>`;
+  });
+
+  cart.innerHTML += `<div class="total">Total: ₹${calculateTotal()}</div>
+                     <button onclick="addNewProduct()">Add New Product</button>`;
+}
+
+// Initial render
+renderProducts();
+renderCart();
