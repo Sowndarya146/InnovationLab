@@ -1,0 +1,13 @@
+// Inheritance
+class Student extends Person {
+  constructor(name, age, grade) {
+    super(name, age);
+    this.grade = grade;
+  }
+  greet() {
+    console.log(`Hi, I'm ${this.name}, in grade ${this.grade}`);
+  }
+}
+
+let s1 = new Student("Anu", 20, "B.Sc");
+s1.greet();
