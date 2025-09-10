@@ -1,0 +1,18 @@
+//Classes and this
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  greet() {
+    console.log(`Hi, I'm ${this.name}, ${this.age} years old`);
+  }
+}
+
+let p1 = new Person("alex", 22);
+p1.greet();
+
+// this lost
+let lost = p1.greet;
+lost();
+
